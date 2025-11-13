@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Eternal Dungeon - Infinite RPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-canvas"></div>
+        <div id="mobile-controls" class="mobile-only">
+            <div class="control-pad">
+                <button class="dir-btn up" data-dir="up">▲</button>
+                <button class="dir-btn left" data-dir="left">◄</button>
+                <button class="dir-btn right" data-dir="right">►</button>
+                <button class="dir-btn down" data-dir="down">▼</button>
+            </div>
+            <div class="action-buttons">
+                <button id="btn-melee" class="action-btn active">⚔️</button>
+                <button id="btn-ranged" class="action-btn">🏹</button>
+                <button id="btn-magic" class="action-btn">✨</button>
+                <button id="btn-inventory" class="action-btn">🎒</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@instantdb/core@v0.12.6/dist/index.umd.js"></script>
+    
+    <script src="config/GameConfig.js"></script>
+    <script src="database/InstantDBClient.js"></script>
+    <script src="utils/MobileControls.js"></script>
+    <script src="systems/DungeonGenerator.js"></script>
+    <script src="systems/LootSystem.js"></script>
+    <script src="systems/InventorySystem.js"></script>
+    <script src="systems/PlayerSystem.js"></script>
+    <script src="systems/EnemySystem.js"></script>
+    <script src="systems/CombatSystem.js"></script>
+    <script src="scenes/BootScene.js"></script>
+    <script src="scenes/UIScene.js"></script>
+    <script src="scenes/InventoryScene.js"></script>
+    <script src="scenes/GameScene.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
